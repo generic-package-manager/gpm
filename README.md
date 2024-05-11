@@ -35,14 +35,14 @@ To use this method, make sure you have the requirements installed as per your os
 **Requirements**: 
 *pwsh (PowerShell)* on Windows OS
 ```shell
-. { iwr -useb https://github.com/generic-package-manager/gpm/pyro/windows/raw/install.ps1 } | iex
+. { iwr -useb https://raw.githubusercontent.com/generic-package-manager/gpm/main/pyro/windows/install.ps1 } | iex
 ```
 
 **For Linux**
 
 **Requirements**: *curl* on Linux
 ```shell
-curl --proto '=https' --tlsv1.2 -sSf https://github.com/generic-package-manager/gpm/pyro/linux/raw/install.sh | bash
+curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/generic-package-manager/gpm/main/pyro/linux/install.sh | bash
 ```
 
 ### (2) ⚡ Install from releases
