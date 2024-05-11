@@ -178,7 +178,7 @@ class SystemService {
         rcFile = '.fishrc';
       }
       final file = File(combinePath([getUserHome(), rcFile]));
-      file.writeAsString(
+      file.writeAsStringSync(
         'PATH="$path:\$PATH"',
         mode: FileMode.append,
         flush: true,
