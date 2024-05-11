@@ -18,7 +18,7 @@ This file contains information about **type** of the repository that is whether 
 
 Next, it contains **build** instructions on what platforms are supported by the repository and instructions on how to build the repository on each of them.
 
-Here is gpm's own [build specification]() to help you understand, it contains detailed description on how to write a build specification file.
+Here is gpm's own [build specification](https://github.com/generic-package-manager/gpm/blob/main/gpm.yaml) to help you understand, it contains detailed description on how to write a build specification file.
 
 You can test your build specification locally without even pushing the file by using the `--build-locally` option.s
 

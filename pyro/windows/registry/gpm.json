@@ -3,15 +3,13 @@
   "repo": "gpm",
   "index": 0,
   "type": "secondary",
-  "tag": "v0.1-alpha",
+  "tag": "v1.0.0",
   "explicit_version": false,
-  "versions": [
-    "v0.1-alpha"
-  ],
+  "versions": [],
   "name": "gpm.exe",
   "size": 7724976,
   "label": "",
-  "browser_download_url": "https://github.com/omegaui/gpm/releases/download/v0.1-alpha/gpm.exe",
+  "browser_download_url": "https://github.com/generic-package-manager/gpm/releases/download/v1.0.0/gpm.exe",
   "content_type": "application/octet-stream",
   "updated_at": "2024-03-07 12:25:58.000Z",
   "download_count": 14,
