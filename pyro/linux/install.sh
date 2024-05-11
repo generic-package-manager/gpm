@@ -15,33 +15,33 @@ mkdir ~/.gpm
 echo "Creating ~/.gpm/apps ..."
 mkdir ~/.gpm/apps/
 echo "Creating gpm binary home directory ..."
-mkdir ~/.gpm/apps/omegaui
-mkdir ~/.gpm/apps/omegaui/gpm
+mkdir ~/.gpm/apps/generic-package-manager
+mkdir ~/.gpm/apps/generic-package-manager/gpm
 
 # Creating registry structure
 echo "Creating registry structure ..."
 echo "Creating ~/.gpm/registry ..."
 mkdir ~/.gpm/registry/
 echo "Creating gpm registry home directory ..."
-mkdir ~/.gpm/registry/omegaui
+mkdir ~/.gpm/registry/generic-package-manager
 
 
 # Starting to download gpm
 echo "Finding the latest gpm release on GitHub ..."
 echo "Downloading gpm ..."
-wget https://github.com/omegaui/gpm/releases/latest/download/gpm --output-document=$HOME/.gpm/apps/omegaui/gpm/gpm
-chmod +x ~/.gpm/apps/omegaui/gpm/gpm
-~/.gpm/apps/omegaui/gpm/gpm --version
+wget https://github.com/generic-package-manager/gpm/releases/latest/download/gpm --output-document=$HOME/.gpm/apps/generic-package-manager/gpm/gpm
+chmod +x ~/.gpm/apps/generic-package-manager/gpm/gpm
+~/.gpm/apps/generic-package-manager/gpm/gpm --version
 
 # Pulling Registry Information
 echo "Pulling Registry Information ..."
 echo "This will make gpm updatable using gpm itself ;)"
-wget -q https://raw.githubusercontent.com/omegaui/gpm/master/pyro/linux/registry/gpm.json --output-document=$HOME/.gpm/registry/omegaui/gpm.json
+wget -q https://raw.githubusercontent.com/generic-package-manager/gpm/master/pyro/linux/registry/gpm.json --output-document=$HOME/.gpm/registry/generic-package-manager/gpm.json
 
 # Putting gpm on PATH
 echo "Putting gpm on PATH ..."
 
-gpm_path="$HOME/.gpm/apps/omegaui/gpm"
+gpm_path="$HOME/.gpm/apps/generic-package-manager/gpm"
 
 # Check if gpm is already on PATH
 if command -v gpm &> /dev/null; then
@@ -58,7 +58,7 @@ if command -v gpm &> /dev/null; then
     echo "gpm is on PATH."
 
     # Checking for updates
-    gpm --update omegaui/gpm
+    gpm --update generic-package-manager/gpm
 
     # Conclusion
     echo "Done! gpm is now installed on your system."
