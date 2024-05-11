@@ -1,0 +1,20 @@
+{
+  "owner": "omegaui",
+  "repo": "gpm",
+  "index": 0,
+  "type": "secondary",
+  "tag": "v0.1-alpha",
+  "explicit_version": false,
+  "versions": [
+    "v0.1-alpha"
+  ],
+  "name": "gpm",
+  "size": 7724976,
+  "label": "",
+  "browser_download_url": "https://github.com/omegaui/gpm/releases/download/v0.1-alpha/gpm",
+  "content_type": "application/octet-stream",
+  "updated_at": "2024-03-07 12:25:58.000Z",
+  "download_count": 14,
+  "mode": "release",
+  "packageInstalledAt": "2024-03-07 19:19:10.573539"
+}

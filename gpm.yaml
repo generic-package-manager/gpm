@@ -1,0 +1,88 @@
+
+# GPM's build from source specification
+# v0.0.1
+
+
+# specify the type of repository
+# either your repo could be a cli program or a gui application.
+# [type] can be [cli] or [application]
+# if you set [type] to [cli] then, gpm will try to find the [executable] on [platform]'s path.
+# during the installation process, if not found gpm will add it to the path.
+# if you set [type] to [application] then, gpm will omit the environment check.
+
+type: cli
+
+# icon: <raw link to your repository/program's icon file>
+
+# the [build] parameter contains the list of platforms supported by your repository
+# the supported platform names are [windows], [linux] & [macos].
+# If you want to target a specific linux distribution you can specify one of
+# [debian], [fedora], [arch] instead of [linux]
+# if you want to target other linux distributions like 
+# OpenSUSE then simple specify [fedora],
+# or [linux] if not very common distro.
+
+build:
+  # applicable for every platform:
+  # OPT: the [note] parameter is used to display a message to the user before the build is started
+  # OPT: the [executable] parameter tells gpm about the entry point of your program 
+  #      (used for making desktop shortcuts and environment checks) (defaults to repository)
+  # OPT: the [appData] to prevent deletion of files in your repository after build is completed specify them in this list.
+  # OPT: the [dependencies] contains the list of dependencies that are required to build your repository from source along with their versions.
+  # MAN: the [steps] contains the list of commands that are executed one by one for building your repository from source.
+
+  # OPT - Optional
+  # MAN - Mandatory
+
+  - windows:
+      note: 'Thanks for using GPM (windows).'
+      # executable tells gpm your program's entry point
+      executable: gpm.exe
+      # after the build process is finished
+      # the cloned repository is deleted
+      # to prevent deleting the compiled files or directories
+      # list them here, gpm will store them as app data required for your application to run at ~/.gpm/apps/yourid/reponame
+      appData:
+        - gpm.exe
+        - gpm-binary-replacer.exe
+      dependencies:
+        - executable: pwsh
+          # version parameter is optional
+          version: ^7.4.0
+          # help parameter is optional
+          help: You can download Powershell from https://github.com/PowerShell/PowerShell/releases
+        - executable: dart
+          # version parameter is optional
+          version: ^3.2.6
+          # installCommand parameter is optional
+          installCommand: choco install dart
+          # help parameter is optional
+          help: You can download Dart from https://dart.dev/get-dart
+      steps:
+        - name: Running pub get
+          run: dart pub get
+        - name: Compiling GPM Updater (Only needed for Windows OS)
+          run:  dart compile exe -o gpm-binary-replacer.exe --target-os windows bin\gpm_binary_replacer.dart
+        - name: Compiling GPM with dart
+          run: dart compile exe -o gpm.exe --target-os windows bin\gpm.dart
+  - linux:
+      note: 'Thanks for using GPM (linux).'
+      executable: gpm
+      appData:
+        - gpm
+      dependencies:
+        - executable: dart
+          version: ^3.2.6
+          help: You can download Dart from https://dart.dev/get-dart
+      steps:
+        - name: Running pub get
+          run: dart pub get
+        - name: Compiling GPM with dart
+          run: dart compile exe -o gpm --target-os linux bin/gpm.dart
+
+# the following section allows you to rename your downloaded assets
+# it supports renaming secondary packages on any supported platform.
+releases:
+  linux:
+    secondary:
+      renameTo: gpm # suppose, gpm.AppImage got renamed to command convention "gpm".

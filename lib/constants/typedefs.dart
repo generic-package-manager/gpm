@@ -1,0 +1,1 @@
+typedef VoidCallback = void Function();
