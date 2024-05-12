@@ -4,6 +4,7 @@
     <p>
         Directly install applications from their GitHub repository with out-of-the-box support for updates<br>using gpm, the package manager with the superpowers of a cross platform build tool.
     </p>
+    <a href="https://github.com/generic-package-manager/gpm/blob/main/docs/EXAMPLES.md"><img src="https://img.shields.io/badge/Usage-Examples-pink?style=for-the-badge" alt="Examples"/></a>
 </div>
 
 ## Getting Started
