@@ -106,6 +106,9 @@ void movePath(String oldPath, String newPath) {
       var newDirectory = Directory(newPath);
       if (!newDirectory.existsSync()) {
         newDirectory.createSync(recursive: true);
+      } else {
+        newDirectory.deleteSync(recursive: true);
+        newDirectory.createSync(recursive: true);
       }
       oldEntity.renameSync(newPath);
     } else {

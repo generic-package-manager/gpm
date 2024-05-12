@@ -188,7 +188,7 @@ class PackageDisintegrationService {
       final sourcePath = GPMStorage.toAppDirPath(id);
       final dir = Directory(sourcePath);
       if (dir.existsSync()) {
-        dir.delete(recursive: true);
+        dir.deleteSync(recursive: true);
       }
       // cleaning desktop shortcut
       LinuxUtils.deleteDesktopShortcut(parseRepoName(id));

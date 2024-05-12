@@ -37,7 +37,7 @@ ${"Generic Package Manager".bold}
 """;
 
 /// cli version
-const String version = '1.0.0';
+const String version = '1.0.1';
 
 // testing compatibility with gui
 
