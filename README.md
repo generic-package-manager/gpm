@@ -50,9 +50,9 @@ This method is pretty easy but its not recommended as you won't recieve any upda
 
 Direct download links are provided below:
 
-**For Windows**: Click to get [`gpm.exe`](https://github.com/omegaui/gpm/releases/download/gpm.exe) and [`gpm-binary-replacer.exe`](https://github.com/omegaui/gpm/releases/download/gpm-binary-replacer.exe)
+**For Windows**: Click to get [`gpm.exe`](https://github.com/omegaui/gpm/releases/latest/download/gpm.exe) and [`gpm-binary-replacer.exe`](https://github.com/omegaui/gpm/releases/latest/download/gpm-binary-replacer.exe)
 
-**For Linux** : Click to get [`gpm.AppImage`](https://github.com/omegaui/gpm/releases/download/gpm.AppImage)
+**For Linux** : Click to get [`gpm.AppImage`](https://github.com/omegaui/gpm/releases/latest/download/gpm.AppImage)
 
 (**Important:** Rename **`gpm.AppImage`** to **`gpm`**)
 
