@@ -68,13 +68,13 @@ Step 2: Run the downloaded binary as:
  **For Windows**
  
 ```shell
-./gpm.exe --install generic-package-manager/gpm --yes
+./gpm.exe --build generic-package-manager/gpm --yes
 ```
 
 **For Linux**
  
 ```shell
-./gpm --install generic-package-manager/gpm --yes
+./gpm --build generic-package-manager/gpm --yes
 ```
 
 ### (4) ⚡ Build gpm using gpm
