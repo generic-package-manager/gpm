@@ -305,7 +305,7 @@ class BuildService {
           }
         } else {
           final code =
-              await LinuxUtils.createDesktopShortcut(repo, packagePath);
+              await LinuxUtils.createDesktopShortcut(id, packagePath);
           if (code != 0) {
             print("Sorry, we couldn't create a desktop shortcut for this app."
                 .magenta
