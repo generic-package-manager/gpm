@@ -29,7 +29,7 @@ mkdir ~/.gpm/registry/generic-package-manager
 # Starting to download gpm
 echo "Finding the latest gpm release on GitHub ..."
 echo "Downloading gpm ..."
-wget https://github.com/generic-package-manager/gpm/releases/latest/download/gpm --output-document=$HOME/.gpm/apps/generic-package-manager/gpm/gpm
+wget https://github.com/generic-package-manager/gpm/releases/latest/download/gpm.AppImage --output-document=$HOME/.gpm/apps/generic-package-manager/gpm/gpm
 chmod +x ~/.gpm/apps/generic-package-manager/gpm/gpm
 ~/.gpm/apps/generic-package-manager/gpm/gpm --version
 
@@ -40,7 +40,7 @@ wget -q https://raw.githubusercontent.com/generic-package-manager/gpm/master/pyr
 
 # Putting gpm on PATH
 echo "Putting gpm on PATH ..."
-
+gpm
 gpm_path="$HOME/.gpm/apps/generic-package-manager/gpm"
 
 # Check if gpm is already on PATH
