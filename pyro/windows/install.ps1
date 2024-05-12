@@ -32,6 +32,8 @@ mkdir $HOME\.gpm\registry\generic-package-manager
 echo "Finding the latest gpm release on GitHub ..."
 echo "Downloading gpm ..."
 pwsh -NoProfile -ExecutionPolicy Bypass -Command "& { Invoke-WebRequest -Uri 'https://github.com/generic-package-manager/gpm/releases/latest/download/gpm.exe' -OutFile '$HOME\.gpm\apps\generic-package-manager\gpm\gpm.exe' }"
+echo "Downloading gpm update helper ..."
+pwsh -NoProfile -ExecutionPolicy Bypass -Command "& { Invoke-WebRequest -Uri 'https://github.com/generic-package-manager/gpm/releases/latest/download/gpm-binary-replacer.exe' -OutFile '$HOME\.gpm\apps\generic-package-manager\gpm\gpm-binary-replacer.exe' }"
 Start-Process -FilePath $HOME/.gpm/apps/generic-package-manager/gpm/gpm.exe -ArgumentList "--version" -Wait -NoNewWindow
 
 # Pulling Registry Information
