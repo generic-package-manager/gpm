@@ -1,5 +1,6 @@
+![gpm-banner](https://github.com/user-attachments/assets/e1de1053-26d3-44be-9fcf-09348e4a4bd2)
+
 <div align="center">
-    <img src=".images/app-icon.png" width=200/>
     <h3>Generic Package Manager</h3>
     <p>
         Directly install applications from their GitHub repository with out-of-the-box support for updates<br>using gpm, the package manager with the superpowers of a cross platform build tool.
