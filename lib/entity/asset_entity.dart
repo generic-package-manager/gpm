@@ -73,7 +73,7 @@ class ReleaseAssetEntity {
   bool isCompatibleWithOS() {
     final keywords = SystemService.getOSKeywords();
     for (final key in keywords) {
-      if (name.contains(key)) {
+      if (name.toLowerCase().contains(key)) {
         return true;
       }
     }
